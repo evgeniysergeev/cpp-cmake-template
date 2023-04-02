@@ -1,6 +1,7 @@
-# cpp-cmake-template
+# Cpp-CMake-Template
 
-
+This template can be used as starting point for C++ CMake projects
+Based on this tutorial: https://cmake.org/cmake/help/latest/guide/tutorial/index.html
 
 ## Getting started
 
