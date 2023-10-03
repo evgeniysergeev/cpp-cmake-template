@@ -29,3 +29,6 @@ list(APPEND INCLUDE_DIRECTORIES
 target_include_directories(Cpp-CMake-Template PUBLIC
     ${INCLUDE_DIRECTORIES}
 )
+
+# Run tests
+add_subdirectory(tests)
