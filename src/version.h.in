@@ -1,0 +1,9 @@
+// the configured options and settings for Tutorial
+#pragma once
+
+#define PROJECT_NAME "@PROJECT_NAME@"
+#define PROJECT_VERSION "@Cpp-CMake-Template_VERSION@"
+#define PROJECT_VERSION_MAJOR @Cpp-CMake-Template_VERSION_MAJOR@
+#define PROJECT_VERSION_MINOR @Cpp-CMake-Template_VERSION_MINOR@
+#define PROJECT_VERSION_PATCH @Cpp-CMake-Template_VERSION_PATCH@
+#define PROJECT_VERSION_TWEAK @Cpp-CMake-Template_VERSION_TWEAK@

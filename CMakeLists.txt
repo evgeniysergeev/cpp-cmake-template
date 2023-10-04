@@ -20,7 +20,7 @@ target_compile_options(default_compiler_flags INTERFACE
 )
 
 # generate config header file
-configure_file(config.h.in config.h)
+configure_file(src/version.h.in version.h)
 
 # add the executable
 add_executable(Cpp-CMake-Template src/main.cpp)
