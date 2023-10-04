@@ -1,6 +1,6 @@
 pushd ../..
 
 cmake \
-  --build ./build
+  --build ./build-osx
 
 popd

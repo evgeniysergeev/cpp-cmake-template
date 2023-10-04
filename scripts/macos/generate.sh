@@ -1,7 +1,7 @@
 pushd ../..
 
 cmake \
-  -B build \
+  -B build-osx \
   -G Xcode \
   .
 
