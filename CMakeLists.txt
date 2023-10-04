@@ -7,12 +7,6 @@ project(Cpp-CMake-Template VERSION 0.1.2.3)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-# set default include directories (for config.h)
-set(INCLUDE_DIRECTORIES
-    ${PROJECT_BINARY_DIR}
-    "src"
-)
-
 # generate config header file
 configure_file(config.h.in config.h)
 
@@ -25,7 +19,8 @@ target_link_libraries(Cpp-CMake-Template PUBLIC gamelib)
 
 # configure include directories
 target_include_directories(Cpp-CMake-Template PUBLIC
-    ${INCLUDE_DIRECTORIES}
+    ${PROJECT_BINARY_DIR}
+    "src"
 )
 
 # Run tests
