@@ -9,7 +9,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # set default include directories (for config.h)
 set(INCLUDE_DIRECTORIES
-    "${PROJECT_BINARY_DIR}"
+    ${PROJECT_BINARY_DIR}
+    "src"
 )
 
 # generate config header file
@@ -21,9 +22,6 @@ add_executable(Cpp-CMake-Template src/main.cpp)
 # add subdirectories
 add_subdirectory(src/gamelib)
 target_link_libraries(Cpp-CMake-Template PUBLIC gamelib)
-list(APPEND INCLUDE_DIRECTORIES
-    "${PROJECT_SOURCE_DIR}/src/gamelib"
-)
 
 # configure include directories
 target_include_directories(Cpp-CMake-Template PUBLIC
