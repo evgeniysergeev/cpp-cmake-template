@@ -3,6 +3,15 @@ cmake_minimum_required(VERSION 3.15)
 # set the project name
 project(Cpp-CMake-Template VERSION 0.1.2.3)
 
+#set(PROJECT_LICENSE "MIT")
+
+set(PROJECT_LONG_DESCRIPTION "Simple CMake C++ template")
+
+if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
+    message(STATUS "Setting build type to 'Release' as none was specified.")
+    set(CMAKE_BUILD_TYPE "Release" CACHE STRING "Choose the type of build." FORCE)
+endif()
+
 # determine which compiler is currently using to build
 set(gcc_like_cxx "$<COMPILE_LANG_AND_ID:CXX,ARMClang,AppleClang,Clang,GNU,LCC>")
 set(msvc_cxx "$<COMPILE_LANG_AND_ID:CXX,MSVC>")
