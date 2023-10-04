@@ -3,7 +3,7 @@
 #include <exception>
 #include "config.h"
 
-static terminate_function s_prev_termination_handler = nullptr;
+static std::terminate_handler s_prev_termination_handler = nullptr;
 
 static void termination_handler()
 {
