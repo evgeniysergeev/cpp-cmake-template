@@ -21,8 +21,7 @@
         "kind": "build",
         "isDefault": true
       },
-      "detail": "Build Project",
-      "dependsOn": ["Configure Project"]
+      "detail": "Build Project"
     }
   ]
 }

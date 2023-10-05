@@ -5,14 +5,14 @@
       "name": "Debug Project",
       "type": "cppvsdbg",
       "request": "launch",
-      "program": "${workspaceFolder}\\build-win\\Debug\\Cpp-CMake-Template.exe",
+      "program": "${workspaceFolder}\\build\\Debug\\Cpp-CMake-Template.exe",
       "args": [
         "arg1",
         "arg2",
         "arg3"
       ],
       "stopAtEntry": false,
-      "cwd": "${workspaceFolder}\\build-win\\Debug",
+      "cwd": "${workspaceFolder}\\build\\Debug",
       "environment": [],
       "console": "integratedTerminal",
       "preLaunchTask": "Build Project"

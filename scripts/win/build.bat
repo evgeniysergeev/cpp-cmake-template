@@ -1,7 +1,7 @@
 pushd ..\..
 
 cmake ^
-  --build .\build-win ^
+  --build .\build ^
   --parallel %NUMBER_OF_PROCESSORS%
 
 popd
