@@ -11,6 +11,7 @@
         "type": "cppvsdbg",
         "program": "${workspaceFolder}\\build\\Debug\\Cpp-CMake-Template.exe",
         "cwd": "${workspaceFolder}\\build\\Debug",
+        "console": "integratedTerminal",
       },
       "osx": {
         "externalConsole": false,
@@ -23,7 +24,7 @@
             "ignoreFailures": true
           }
         ],        
-      }
+      },
       "args": [
         "arg1",
         "arg2",
@@ -31,7 +32,6 @@
       ],
       "stopAtEntry": false,
       "environment": [],
-      "console": "integratedTerminal",
       "preLaunchTask": "Build Project"
     }
   ]
