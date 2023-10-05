@@ -1,4 +1,10 @@
-add_library(gamelib STATIC map.cpp world.cpp)
+file(GLOB_RECURSE gamelib_SRC
+    "*.h"
+    "*.cpp"
+    "*.c"
+)
+
+add_library(gamelib STATIC ${gamelib_SRC})
 
 # add to include directories
 target_include_directories(gamelib
