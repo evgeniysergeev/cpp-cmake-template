@@ -20,7 +20,7 @@ set(msvc_cxx "$<COMPILE_LANG_AND_ID:CXX,MSVC>")
 add_library(default_compiler_flags INTERFACE)
 
 # specify the C++ standard
-target_compile_features(default_compiler_flags INTERFACE cxx_std_17)
+target_compile_features(default_compiler_flags INTERFACE cxx_std_20)
 
 # set default compiler warning flags
 target_compile_options(default_compiler_flags INTERFACE
