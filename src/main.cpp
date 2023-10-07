@@ -7,8 +7,6 @@ static std::terminate_handler s_prev_termination_handler = nullptr;
 
 static void termination_handler()
 {
-    std::cerr << "Unhandled exception" << std::endl << std::flush;
-
     if (s_prev_termination_handler != nullptr) {
       s_prev_termination_handler();
     }
