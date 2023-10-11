@@ -8,8 +8,8 @@ project(Cpp-CMake-Template VERSION 0.1.2.3)
 set(PROJECT_LONG_DESCRIPTION "Simple CMake C++ template")
 
 if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
-    message(STATUS "Setting build type to 'Release' as none was specified.")
-    set(CMAKE_BUILD_TYPE "Release" CACHE STRING "Choose the type of build." FORCE)
+  message(STATUS "Setting build type to 'Release' as none was specified.")
+  set(CMAKE_BUILD_TYPE "Release" CACHE STRING "Choose the type of build." FORCE)
 endif()
 
 # determine which compiler is currently using to build
@@ -24,8 +24,8 @@ target_compile_features(default_compiler_flags INTERFACE cxx_std_20)
 
 # set default compiler warning flags
 target_compile_options(default_compiler_flags INTERFACE
-    "$<${gcc_like_cxx}:$<BUILD_INTERFACE:-Wall;-Wextra;-Wshadow;-Wformat=2;-Wunused>>"
-    "$<${msvc_cxx}:$<BUILD_INTERFACE:-W3>>"
+  "$<${gcc_like_cxx}:$<BUILD_INTERFACE:-Wall;-Wextra;-Wshadow;-Wformat=2;-Wunused>>"
+  "$<${msvc_cxx}:$<BUILD_INTERFACE:-W3>>"
 )
 
 # add dependencies
@@ -43,8 +43,8 @@ target_link_libraries(Cpp-CMake-Template PUBLIC gamelib default_compiler_flags)
 
 # configure include directories
 target_include_directories(Cpp-CMake-Template PUBLIC
-    ${PROJECT_BINARY_DIR}
-    "src"
+  ${PROJECT_BINARY_DIR}
+  "src"
 )
 
 # Run tests

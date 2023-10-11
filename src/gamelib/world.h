@@ -5,11 +5,11 @@
 namespace gamelib {
 
 class World {
-    public:
-        World();
-        virtual ~World();
+  public:
+    World();
+    virtual ~World();
 
-    private:
+  private:
 
 };
 

@@ -1,14 +1,14 @@
 file(GLOB_RECURSE gamelib_SRC
-    "*.h"
-    "*.cpp"
-    "*.c"
+  "*.h"
+  "*.cpp"
+  "*.c"
 )
 
 add_library(gamelib STATIC ${gamelib_SRC})
 
 # add to include directories
 target_include_directories(gamelib
-    INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}
+  INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
 # use requrements from interface library with compiler flags
@@ -18,5 +18,5 @@ target_link_libraries(gamelib PUBLIC default_compiler_flags)
 option(USE_MYMATH "Use tutorial provided math implementation" ON)
 
 if (USE_MYMATH)
-    target_compile_definitions(gamelib PRIVATE "USE_MYMATH")
+  target_compile_definitions(gamelib PRIVATE "USE_MYMATH")
 endif()
