@@ -28,14 +28,14 @@ target_compile_options(default_compiler_flags INTERFACE
   "$<${msvc_cxx}:$<BUILD_INTERFACE:-W3>>"
 )
 
-# add dependencies
-include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/use_boost.cmake)
-
 # generate config header file
 configure_file(src/version.h.in version.h)
 
 # add the executable
 add_executable(Cpp-CMake-Template src/main.cpp)
+
+# add dependencies
+#include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/use_boost.cmake)
 
 # add subdirectories
 add_subdirectory(src/gamelib)
