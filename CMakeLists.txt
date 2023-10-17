@@ -31,11 +31,24 @@ target_compile_options(default_compiler_flags INTERFACE
 # generate config header file
 configure_file(src/version.h.in version.h)
 
+file(GLOB_RECURSE CPP_CMAKE_TEMPLATE_SRC
+  "src/*.h"
+  "src/*.cpp"
+  "src/*.c"
+)
+
 # add the executable
-add_executable(Cpp-CMake-Template src/main.cpp)
+add_executable(
+  Cpp-CMake-Template
+  ${CPP_CMAKE_TEMPLATE_SRC}
+)
 
 # add dependencies
+
+option(USE_GSTREAMER "Use gstreamer tutorial" OFF)
+
 #include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/use_boost.cmake)
+include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/use_gstreamer.cmake)
 
 # add subdirectories
 add_subdirectory(src/gamelib)
