@@ -13,10 +13,3 @@ target_include_directories(gamelib
 
 # use requrements from interface library with compiler flags
 target_link_libraries(gamelib PUBLIC default_compiler_flags)
-
-# just some option
-option(USE_MYMATH "Use tutorial provided math implementation" ON)
-
-if (USE_MYMATH)
-  target_compile_definitions(gamelib PRIVATE "USE_MYMATH")
-endif()
