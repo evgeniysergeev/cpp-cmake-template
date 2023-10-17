@@ -45,9 +45,10 @@ add_executable(
 
 # add dependencies
 
+option(USE_BOOST "Use Boost Library" OFF)
 option(USE_GSTREAMER "Use gstreamer tutorial" OFF)
 
-#include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/use_boost.cmake)
+include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/use_boost.cmake)
 include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/use_gstreamer.cmake)
 
 # add subdirectories
