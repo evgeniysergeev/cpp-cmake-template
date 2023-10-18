@@ -3,7 +3,7 @@
 #include <exception>
 #include "version.h"
 
-#include "gstreamer-tutorial-1.h"
+#include "gstreamer-tutorial-2.h"
 
 static std::terminate_handler s_prev_termination_handler = nullptr;
 
@@ -29,7 +29,7 @@ int main(int argc, char* argv[], char* env[])
 #if defined(__APPLE__) && TARGET_OS_MAC && !TARGET_OS_IPHONE
   return gst_macos_main(gstreamer_tutorial_main, argc, argv, NULL);
 #else
-  return gstreamer_tutorial_1(argc, argv);
+  return gstreamer_tutorial_2(argc, argv);
 #endif
 
 #endif  // USE_GSTREAMER
