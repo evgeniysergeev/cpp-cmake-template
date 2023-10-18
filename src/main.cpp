@@ -29,7 +29,7 @@ int main(int argc, char* argv[], char* env[])
 #if defined(__APPLE__) && TARGET_OS_MAC && !TARGET_OS_IPHONE
   return gst_macos_main(gstreamer_tutorial_main, argc, argv, NULL);
 #else
-  return gstreamer_tutorial_main(argc, argv);
+  return gstreamer_tutorial_1(argc, argv);
 #endif
 
 #endif  // USE_GSTREAMER
