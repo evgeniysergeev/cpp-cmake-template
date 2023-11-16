@@ -3,6 +3,12 @@
 This template can be used as starting point for C++ CMake projects
 Based on this tutorial: https://cmake.org/cmake/help/latest/guide/tutorial/index.html
 
+# macOS
+
+```
+brew install gstreamer-development
+```
+
 ## Getting started
 
 To make it easy for you to get started with GitLab, here's a list of recommended next steps.

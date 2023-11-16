@@ -6,7 +6,7 @@
 #include <TargetConditionals.h>
 #endif
 
-int gstreamer_tutorial_1(int argc, char *argv[])
+int gstreamer_tutorial_1(int argc, char *argv[], void *user_data)
 {
   GstElement *pipeline;
   GstBus *bus;

@@ -5,7 +5,7 @@
       "name": "Debug Project",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/build/Debug/Cpp-CMake-Template",
+      "program": "${workspaceFolder}/build/Cpp-CMake-Template",
       "cwd": "${workspaceFolder}/build/Debug",
       "windows": {
         "type": "cppvsdbg",

@@ -4,7 +4,7 @@
 
 extern "C" {
 
-int gstreamer_tutorial_2(int argc, char *argv[]);
+int gstreamer_tutorial_2(int argc, char *argv[], void *user_data);
 
 }  // extern "C"
 
