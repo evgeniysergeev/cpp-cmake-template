@@ -33,7 +33,7 @@ if(USE_BOOST)
   find_package(Boost COMPONENTS program_options REQUIRED)
 
   if(Boost_FOUND)
-    if (DEBUG_BOOST_CMAKE)
+    if(DEBUG_BOOST_CMAKE)
       message("Boost_LIBRARY_DIRS is set to: ${Boost_LIBRARY_DIRS}")
       message("Boost_INCLUDE_DIRS is set to: ${Boost_INCLUDE_DIRS}")
     endif()
@@ -45,6 +45,6 @@ if(USE_BOOST)
 
     target_compile_definitions(Cpp-CMake-Template PRIVATE "USE_BOOST")
 
-  endif()
+  endif() # Boost_FOUND
 
-endif()
+endif() # USE_BOOST
