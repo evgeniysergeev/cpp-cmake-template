@@ -4,12 +4,12 @@
     {
       "label": "Configure Project",
       "type": "shell",
-      "command": "${workspaceFolder}/scripts/osx/generate.sh",
+      "command": "${workspaceFolder}/scripts/macos/generate.sh",
       "windows": {
         "command": "${workspaceFolder}\\scripts\\windows\\generate.bat"
       },
       "options": {
-        "cwd": "${workspaceFolder}/scripts/osx",
+        "cwd": "${workspaceFolder}/scripts/macos",
         "windows": {
           "cwd": "${workspaceFolder}\\scripts\\windows"
         },
@@ -19,12 +19,12 @@
     {
       "label": "Build Project",
       "type": "shell",
-      "command": "${workspaceFolder}/scripts/osx/build.sh",
+      "command": "${workspaceFolder}/scripts/macos/build.sh",
       "windows": {
         "command": "${workspaceFolder}\\scripts\\windows\\build.bat"
       },
       "options": {
-        "cwd": "${workspaceFolder}/scripts/osx",
+        "cwd": "${workspaceFolder}/scripts/macos",
         "windows": {
           "cwd": "${workspaceFolder}\\scripts\\windows"
         },
