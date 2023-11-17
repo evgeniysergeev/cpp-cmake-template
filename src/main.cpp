@@ -3,9 +3,13 @@
 #include <exception>
 #include "version.h"
 
+#ifdef USE_GSTREAMER
+
 #include <gst/gst.h>
 
 #include "gstreamer-tutorial-2.h"
+
+#endif  // USE_GSTREAMER
 
 static std::terminate_handler s_prev_termination_handler = nullptr;
 
