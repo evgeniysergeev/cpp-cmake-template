@@ -1,3 +1,7 @@
 # .gitignore
 
 build
+
+# Ignore JetBrains IDEs directories
+.idea
+cmake-build-*/
