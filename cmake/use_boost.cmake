@@ -31,6 +31,7 @@ if(USE_BOOST)
   endif()
 
   find_package(Boost COMPONENTS program_options REQUIRED)
+  find_package(Boost COMPONENTS log REQUIRED)
 
   if(Boost_FOUND)
     if(DEBUG_BOOST_CMAKE)
@@ -41,7 +42,10 @@ if(USE_BOOST)
     target_include_directories(Cpp-CMake-Template PUBLIC ${Boost_INCLUDE_DIRS})
     link_directories(${Boost_LIBRARY_DIRS})
     add_definitions(${Boost_DEFINITIONS})
-    target_link_libraries(Cpp-CMake-Template PUBLIC Boost::program_options)
+    target_link_libraries(Cpp-CMake-Template PUBLIC
+      Boost::program_options
+      Boost::log
+    )
 
     target_compile_definitions(Cpp-CMake-Template PRIVATE "USE_BOOST")
 

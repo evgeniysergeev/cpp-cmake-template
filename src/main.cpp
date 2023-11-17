@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <exception>
+#include <string_view>
 #include "version.h"
 
 #ifdef USE_GSTREAMER
@@ -10,6 +11,14 @@
 #include "gstreamer-tutorial-2.h"
 
 #endif  // USE_GSTREAMER
+
+#ifdef USE_BOOST
+
+#include <boost/log/trivial.hpp>
+
+#endif  // USE_BOOST
+
+using namespace std::string_view_literals;
 
 static std::terminate_handler s_prev_termination_handler = nullptr;
 
@@ -29,6 +38,8 @@ int main(int argc, char* argv[], char* env[])
   std::cout << PROJECT_NAME
     << " v" << PROJECT_VERSION
     << std::endl;
+
+  BOOST_LOG_TRIVIAL(info) << ""sv << PROJECT_NAME << " v"sv << PROJECT_VERSION;
 
 #ifdef USE_GSTREAMER
 
