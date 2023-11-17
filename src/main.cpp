@@ -14,7 +14,11 @@
 
 #ifdef USE_BOOST
 
+#include <boost/log/core.hpp>
+#include <boost/log/expressions.hpp>
 #include <boost/log/trivial.hpp>
+
+namespace logging = boost::log;
 
 #endif  // USE_BOOST
 
@@ -31,6 +35,14 @@ static void termination_handler()
   std::abort();
 }
 
+void init()
+{
+  logging::core::get()->set_filter
+  (
+    logging::trivial::severity >= logging::trivial::info
+  );
+}
+
 int main(int argc, char* argv[], char* env[])
 {
   s_prev_termination_handler = std::set_terminate(termination_handler);
@@ -40,6 +52,8 @@ int main(int argc, char* argv[], char* env[])
     << std::endl;
 
 #ifdef USE_BOOST
+
+  init();
 
   BOOST_LOG_TRIVIAL(info) << ""sv << PROJECT_NAME << " v"sv << PROJECT_VERSION;
 
