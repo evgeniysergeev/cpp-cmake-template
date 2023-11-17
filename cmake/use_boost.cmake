@@ -20,11 +20,11 @@ if(USE_BOOST)
   # This possibly can be useful if MinGW installed on Windows machine, but you want to use another Boost
   #set(Boost_NO_BOOST_CMAKE ON)
 
-  set(Boost_USE_MULTITHREADED  ON)
-  set(Boost_USE_STATIC_LIBS    ON)
+  set(Boost_USE_MULTITHREADED ON)
+  set(Boost_USE_STATIC_LIBS ON)
   set(Boost_USE_STATIC_RUNTIME OFF)
 
-  if (DEBUG_BOOST_CMAKE)
+  if(DEBUG_BOOST_CMAKE)
     set(Boost_DEBUG ON)
   else()
     set(Boost_VERBOSE ON)

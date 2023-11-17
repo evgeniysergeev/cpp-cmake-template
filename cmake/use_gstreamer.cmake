@@ -30,7 +30,7 @@ if(USE_GSTREAMER)
     )
     set(GST_LINK_LIBRARIES ${gst_files} ${glib_files})
     set(GST_FLAGS "")
-  
+
   endif() # WIN32
 
   if(APPLE)
