@@ -15,20 +15,18 @@ if(USE_GSTREAMER)
   if(WIN32)
 
     set(GST_ROOT_DIR "C:/gstreamer/1.0/msvc_x86_64")
-    set(GST_LIB_DIR "${GST_ROOT_DIR}/lib")
-    set(GST_INCLUDE_DIR "${GST_ROOT_DIR}/include")
 
     if(MSVC)
-      file(GLOB_RECURSE gst_files ${GST_LIB_DIR}/*dll.a)
+      file(GLOB_RECURSE gst_files ${GST_ROOT_DIR}/lib/*dll.a)
     else()
-      file(GLOB_RECURSE gst_files ${GST_LIB_DIR}/*.lib)
+      file(GLOB_RECURSE gst_files ${GST_ROOT_DIR}/lib/*.lib)
     endif()
 
     set(GST_INCLUDE_DIRS
-      ${GST_INCLUDE_DIR}/gstreamer-1.0
-      ${GST_INCLUDE_DIR}/glib-2.0
-      ${GST_LIB_DIR}/glib-2.0/include
-      ${GST_LIB_DIR}/gstreamer-1.0/include
+      ${GST_ROOT_DIR}/include/gstreamer-1.0
+      ${GST_ROOT_DIR}/include/glib-2.0
+      ${GST_ROOT_DIR}/lib/glib-2.0/include
+      ${GST_ROOT_DIR}/lib/gstreamer-1.0/include
     )
     set(GST_LINK_LIBRARIES ${gst_files} ${glib_files})
     set(GST_FLAGS "")
