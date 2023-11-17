@@ -34,8 +34,7 @@ int main(int argc, char* argv[], char* env[])
 
 #ifdef USE_BOOST
 
-
-  utils::InitLogging();
+  utils::InitLogging(PROJECT_NAME "_%N.log");
 
   BOOST_LOG_TRIVIAL(info) << ""sv << PROJECT_NAME << " v"sv << PROJECT_VERSION;
 
