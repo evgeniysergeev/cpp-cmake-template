@@ -39,7 +39,18 @@ int main(int argc, char* argv[], char* env[])
     << " v" << PROJECT_VERSION
     << std::endl;
 
+#ifdef USE_BOOST
+
   BOOST_LOG_TRIVIAL(info) << ""sv << PROJECT_NAME << " v"sv << PROJECT_VERSION;
+
+  BOOST_LOG_TRIVIAL(trace) << "A trace severity message"sv;
+  BOOST_LOG_TRIVIAL(debug) << "A debug severity message"sv;
+  BOOST_LOG_TRIVIAL(info) << "An informational severity message"sv;
+  BOOST_LOG_TRIVIAL(warning) << "A warning severity message"sv;
+  BOOST_LOG_TRIVIAL(error) << "An error severity message"sv;
+  BOOST_LOG_TRIVIAL(fatal) << "A fatal severity message"sv;
+
+#endif
 
 #ifdef USE_GSTREAMER
 
