@@ -32,19 +32,22 @@ void InitLogging(const std::string &log_name)
       keywords::file_name = log_name + "_%N.log",
       keywords::rotation_size = 10 * 1024 * 1024,
       keywords::time_based_rotation = sinks::file::rotation_at_time_point(0, 0, 0),
-      keywords::auto_flush = true
-  );
+      keywords::auto_flush = true);
 
   auto sink = boost::make_shared<sink_type>(backend);
 
   sink->set_formatter(logging::parse_formatter(kFormat));
-
   logging::core::get()->add_sink(sink);
 
-  logging::core::get()->set_filter
-  (
-    logging::trivial::severity >= logging::trivial::info
-  );
+#ifdef _DEBUG
+  // Also print output to console for debug build
+  logging::add_console_log(
+      std::cout,
+      keywords::format = kFormat);
+#endif
+
+  logging::core::get()->set_filter(
+    logging::trivial::severity >= logging::trivial::info);
 }
 
 }  // namespace common
