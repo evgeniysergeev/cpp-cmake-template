@@ -41,6 +41,8 @@ file(GLOB_RECURSE CPP_CMAKE_TEMPLATE_SRC
 add_executable(
   Cpp-CMake-Template
   ${CPP_CMAKE_TEMPLATE_SRC}
+  src/logging/logging.h
+  src/logging/logging.cpp
 )
 
 # add dependencies
@@ -59,6 +61,7 @@ target_link_libraries(Cpp-CMake-Template PUBLIC gamelib default_compiler_flags)
 target_include_directories(Cpp-CMake-Template PUBLIC
   ${PROJECT_BINARY_DIR}
   "src"
+  "src/logging"
 )
 
 # Run tests

@@ -5,24 +5,13 @@
 #include "version.h"
 
 #ifdef USE_GSTREAMER
-
 #include <gst/gst.h>
-
 #include "gstreamer-tutorial-2.h"
-
 #endif  // USE_GSTREAMER
 
 #ifdef USE_BOOST
-
-#include <boost/log/core.hpp>
-#include <boost/log/expressions.hpp>
-#include <boost/log/trivial.hpp>
-
-namespace logging = boost::log;
-
+#include "logging.h"
 #endif  // USE_BOOST
-
-using namespace std::string_view_literals;
 
 static std::terminate_handler s_prev_termination_handler = nullptr;
 
@@ -35,14 +24,6 @@ static void termination_handler()
   std::abort();
 }
 
-void init()
-{
-  logging::core::get()->set_filter
-  (
-    logging::trivial::severity >= logging::trivial::info
-  );
-}
-
 int main(int argc, char* argv[], char* env[])
 {
   s_prev_termination_handler = std::set_terminate(termination_handler);
@@ -53,7 +34,8 @@ int main(int argc, char* argv[], char* env[])
 
 #ifdef USE_BOOST
 
-  init();
+
+  utils::InitLogging();
 
   BOOST_LOG_TRIVIAL(info) << ""sv << PROJECT_NAME << " v"sv << PROJECT_VERSION;
 
