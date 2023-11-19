@@ -1,12 +1,11 @@
 # add gstreamer library
 
-# On Windows
+## On Windows
 # Download and install gstreamer from official site to C:\gstreamer
 
-# On macOS
+## On macOS
 # Install Homebrew
-# Install gstreamer using this commands:
-# `brew install pkg-config`
+# Install gstreamer using this command:
 # `brew install gstreamer`
 
 if(USE_GSTREAMER)

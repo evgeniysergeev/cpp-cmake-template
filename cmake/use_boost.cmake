@@ -2,7 +2,8 @@
 
 if(USE_BOOST)
 
-  # build boost using this command:
+  ## On Windows
+  # build boost using this commands:
   # cd C:\Boost\boost_1_83_0
   # cd tools\build
   # bootstrap.bat
@@ -14,6 +15,9 @@ if(USE_BOOST)
   # cd C:\Boost\boost_1_83_0
   # b2 -j8 variant=debug,release link=shared,static threading=single,multi runtime-link=shared,static address-model=32,64
   # now go to project directory to scripts\windows and check using generate.bat and build.bat scripts
+
+  ## On macOS
+  # `brew install boost`
 
   option(DEBUG_BOOST_CMAKE "Debug how Boost is added to CMake" OFF)
 
