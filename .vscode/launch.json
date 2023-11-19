@@ -5,8 +5,6 @@
       "name": "Debug Project",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/build/Cpp-CMake-Template",
-      "cwd": "${workspaceFolder}/build/Debug",
       "windows": {
         "type": "cppvsdbg",
         "program": "${workspaceFolder}\\build\\Debug\\Cpp-CMake-Template.exe",
@@ -14,6 +12,11 @@
         "console": "integratedTerminal",
       },
       "osx": {
+        "MIMode": "lldb",
+        "program": "${workspaceFolder}/build/Cpp-CMake-Template",
+        "cwd": "${workspaceFolder}/build",
+      },
+      "linux": {
         "externalConsole": false,
         "MIMode": "gdb",
         "miDebuggerPath": "gdb",
@@ -24,6 +27,8 @@
             "ignoreFailures": true
           }
         ],        
+        "program": "${workspaceFolder}/build/Cpp-CMake-Template",
+        "cwd": "${workspaceFolder}/build",
       },
       "args": [
         "arg1",
