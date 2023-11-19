@@ -45,6 +45,14 @@ add_executable(
   src/logging/logging.cpp
 )
 
+# definitions
+
+if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+  target_compile_definitions(Cpp-CMake-Template PRIVATE DEBUG=1)
+else()
+  target_compile_definitions(Cpp-CMake-Template PRIVATE RELEASE=1)
+endif()
+
 # add dependencies
 
 option(USE_BOOST "Use Boost Library" ON)

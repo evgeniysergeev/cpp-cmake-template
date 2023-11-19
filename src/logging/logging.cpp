@@ -39,7 +39,7 @@ void InitLogging(const std::string &log_name)
   sink->set_formatter(logging::parse_formatter(kFormat));
   logging::core::get()->add_sink(sink);
 
-#ifdef _DEBUG
+#ifdef DEBUG
   // Also print output to console for debug build
   logging::add_console_log(
       std::cout,
