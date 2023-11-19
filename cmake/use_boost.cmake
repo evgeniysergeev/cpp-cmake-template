@@ -72,7 +72,13 @@ if(USE_BOOST)
     # 
     # Update this path if unable to build, because icu4c version is set here directly
     # and possibly will need to be adjusted in the future
-    set (ICU_ROOT /opt/homebrew/Cellar/icu4c/73.2) 
+    set(ICU_VERSION "73.2")
+    # Homebrew is installed to different path on intel mac and apple silicon
+    if(APPLE_NATIVE_ARCH STREQUAL "arm64")
+      set(ICU_ROOT "/opt/homebrew/Cellar/icu4c/${ICU_VERSION}")
+    else()
+      set(ICU_ROOT "/usr/local/Cellar/icu4c/${ICU_VERSION}")
+    endif()
     find_package(ICU COMPONENTS uc i18n data REQUIRED)
     add_library(icuuc ALIAS ICU::uc)
     add_library(icui18n ALIAS ICU::i18n)

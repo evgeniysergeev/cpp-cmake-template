@@ -7,6 +7,9 @@ project(Cpp-CMake-Template VERSION 0.1.2.3)
 
 set(PROJECT_LONG_DESCRIPTION "Simple CMake C++ template")
 
+# set APPLE_NATIVE_ARCH on macOS to x86_64 or arm64
+include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/check_arch.cmake)
+
 if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
   message(STATUS "Setting build type to 'Release' as none was specified.")
   set(CMAKE_BUILD_TYPE "Release" CACHE STRING "Choose the type of build." FORCE)
