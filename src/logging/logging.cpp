@@ -48,6 +48,6 @@ void InitLogging(const std::string &log_name)
 
   logging::core::get()->set_filter(
     logging::trivial::severity >= logging::trivial::info);
-}
+  }
 
 }  // namespace common
