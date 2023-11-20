@@ -22,7 +22,7 @@ if(USE_BOOST)
   option(DEBUG_BOOST_CMAKE "Debug how Boost is added to CMake" OFF)
 
   # This possibly can be useful if MinGW installed on Windows machine, but you want to use another Boost
-  #set(Boost_NO_BOOST_CMAKE ON)
+  set(Boost_NO_BOOST_CMAKE TRUE CACHE BOOL "" FORCE)
 
   set(Boost_USE_MULTITHREADED ON)
   set(Boost_USE_STATIC_LIBS ON)
