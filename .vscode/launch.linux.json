@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Project",
+      "type": "cppdbg",
+      "request": "launch",
+      "externalConsole": false,
+      "program": "${workspaceFolder}/build/Cpp-CMake-Template",
+      "cwd": "${workspaceFolder}/build",
+      "args": [
+        "arg1",
+        "arg2",
+        "arg3"
+      ],
+      "stopAtEntry": false,
+      "environment": [],
+      "preLaunchTask": "Build Project"
+    }
+  ]
+}
