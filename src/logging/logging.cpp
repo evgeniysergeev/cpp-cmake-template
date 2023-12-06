@@ -1,3 +1,5 @@
+#ifdef USE_BOOST
+
 #include <boost/log/sinks.hpp>
 #include <boost/log/sinks/sync_frontend.hpp>
 #include <boost/log/utility/setup/formatter_parser.hpp>
@@ -51,3 +53,5 @@ void InitLogging(const std::string &log_name)
   }
 
 }  // namespace common
+
+#endif  // USE_BOOST

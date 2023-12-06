@@ -1,5 +1,7 @@
 #pragma once
 
+#ifdef USE_BOOST
+
 #include <string_view>
 
 #include <boost/log/core.hpp>
@@ -18,3 +20,5 @@ namespace utils {
 void InitLogging(const std::string &log_file_name);
 
 }  // namespace common
+
+#endif  // USE_BOOST
