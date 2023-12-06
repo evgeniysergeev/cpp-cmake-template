@@ -32,7 +32,7 @@ if(USE_GSTREAMER)
 
   endif() # WIN32
 
-  if(APPLE)
+  if(UNIX)
 
     # Required for GStreamer
     find_package(PkgConfig)
